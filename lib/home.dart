@@ -38,142 +38,154 @@ class _MyHomePageState extends State<MyHomePage> {
                 style: TextStyle(fontWeight: FontWeight.bold, color: Colors.red,)
               ),
              
-             SizedBox(
-                height: 15,
-              ),
+            //  SizedBox(
+            //     height: 15,
+            //   ),
 
-              Container(
-                decoration: BoxDecoration(
-                  color: Colors.cyan[100],
-                ),
-                child: Column(
-                  children: [
-                    Text('Gender: $gender', textScaleFactor: 2,),
-                    ListTile(
-                      leading: Radio(
-                        value: "Male",
-                        groupValue: gender,
-                        onChanged: (var value){
-                          setState(() {
-                            gender= value.toString();
-                          });
-                        },
+              Padding(
+                padding: const EdgeInsets.all(8.0),
+                child: Container(
+                  decoration: BoxDecoration(
+                    color: Colors.cyan[100],
+                  ),
+                  child: Column(
+                    children: [
+                      Text('Gender: $gender', textScaleFactor: 2,),
+                      ListTile(
+                        leading: Radio(
+                          value: "Male",
+                          groupValue: gender,
+                          onChanged: (var value){
+                            setState(() {
+                              gender= value.toString();
+                            });
+                          },
+                        ),
+                        title: Text('Male'),
                       ),
-                      title: Text('Male'),
-                    ),
 
-                    ListTile(
-                      leading: Radio(
-                        value: "Female",
-                        groupValue: gender,
-                        onChanged: (var value){
-                          setState(() {
-                            gender= value.toString();
-                          });
-                        },
-                      ),
-                      title: Text('Female'),
-                    )
-                  ],
+                      ListTile(
+                        leading: Radio(
+                          value: "Female",
+                          groupValue: gender,
+                          onChanged: (var value){
+                            setState(() {
+                              gender= value.toString();
+                            });
+                          },
+                        ),
+                        title: Text('Female'),
+                      )
+                    ],
+                  ),
                 ),
               ),
 
-              SizedBox(
-                height: 15,
-              ),
+              // SizedBox(
+              //   height: 15,
+              // ),
 
               //Age
-              Container(
-                decoration: BoxDecoration(
-                  color: Colors.green[100],
-                ),
-                child: Column(
-                  children: [
-                    Text(
-                      'Age: $age years',
-                      textScaleFactor: 2,
-                    ),
-                    new Slider(
-                      value: age,
-                      min: 0,
-                      max: 100,
-                      divisions: 100,
-                      label: '${age.round()}',
-                      onChanged: (double value) {
-                        setState(() {
-                          age = value.roundToDouble();
-                        });
-                      },
-                    ),
-                  ],
+              Padding(
+                padding: const EdgeInsets.all(8.0),
+                child: Container(
+                  decoration: BoxDecoration(
+                    color: Colors.green[100],
+                  ),
+                  child: Column(
+                    children: [
+                      Text(
+                        'Age: $age years',
+                        textScaleFactor: 2,
+                      ),
+                      new Slider(
+                        value: age,
+                        min: 0,
+                        max: 100,
+                        divisions: 100,
+                        label: '${age.round()}',
+                        onChanged: (double value) {
+                          setState(() {
+                            age = value.roundToDouble();
+                          });
+                        },
+                      ),
+                    ],
+                  ),
                 ),
               ),
 
-              SizedBox(
-                height: 15,
-              ),
+              // SizedBox(
+              //   height: 15,
+              // ),
 
               //Weight
-              Container(
-                decoration: BoxDecoration(
-                  color: Colors.teal[100],
-                ),
-                child: Column(
-                  children: [
-                    Text(
-                      'Weight: $weight Kg',
-                      textScaleFactor: 2,
-                    ),
-                    new Slider(
-                      value: weight,
-                      min: 0,
-                      max: 200,
-                      divisions: 200,
-                      label: '${weight.round()}',
-                      onChanged: (double value) {
-                        setState(() {
-                          weight = value.roundToDouble();
-                        });
-                      },
-                    ),
-                  ],
+              Padding(
+                padding: const EdgeInsets.all(8.0),
+                child: Container(
+                  decoration: BoxDecoration(
+                    color: Colors.teal[100],
+                  ),
+                  child: Column(
+                    children: [
+                      Text(
+                        'Weight: $weight Kg',
+                        textScaleFactor: 2,
+                      ),
+                      new Slider(
+                        value: weight,
+                        min: 0,
+                        max: 200,
+                        divisions: 200,
+                        label: '${weight.round()}',
+                        onChanged: (double value) {
+                          setState(() {
+                            weight = value.roundToDouble();
+                          });
+                        },
+                      ),
+                    ],
+                  ),
                 ),
               ),
 
-              SizedBox(
-                height: 15,
-              ),
+              // SizedBox(
+              //   height: 15,
+              // ),
 
               //Height
-              Container(
-                decoration: BoxDecoration(
-                  color: Colors.red[100],
-                ),
-                child: Column(
-                  children: [
-                    Text(
-                      'Height: $height cm',
-                      textScaleFactor: 2,
-                    ),
-                    new Slider(
-                      value: height,
-                      min: 1,
-                      max: 250,
-                      divisions: 250,
-                      label: '${age.round()}',
-                      onChanged: (double value) {
-                        setState(() {
-                          height = value.roundToDouble();
-                        });
-                      },
-                    ),
-                  ],
+              Padding(
+                padding: const EdgeInsets.all(8.0),
+                child: Container(
+                  decoration: BoxDecoration(
+                    color: Colors.red[100],
+                  ),
+                  child: Column(
+                    children: [
+                      Text(
+                        'Height: $height cm',
+                        textScaleFactor: 2,
+                      ),
+                      new Slider(
+                        value: height,
+                        min: 1,
+                        max: 250,
+                        divisions: 250,
+                        label: '${age.round()}',
+                        onChanged: (double value) {
+                          setState(() {
+                            height = value.roundToDouble();
+                          });
+                        },
+                      ),
+                    ],
+                  ),
                 ),
               ),
               
-              SizedBox(
-                height: 15,
-              ),
+              // SizedBox(
+              //   height: 15,
+              // ),
 
               ElevatedButton(
                 onPressed: ()=>checkBMI(),
