@@ -10,11 +10,19 @@ class MyHomePage extends StatefulWidget {
 class _MyHomePageState extends State<MyHomePage> {
   var age = 20.0, height=160.0, weight=50.0, bmi=0.0;
 
-  var gender="Male";
+  var gender="Male", status="";
 
   checkBMI(){
     var heightInMtr= height/100;
     bmi= weight/(heightInMtr*heightInMtr);
+    if(bmi<18.5)
+      status= "Underweight";
+    else if(bmi>=18.5 && bmi<=24.9)
+      status= "Normal or Healthy Weight";
+    else if(bmi>=25 && bmi<=29.9)
+      status= "Overweight";
+    else if(bmi>29.9)
+      status= "Obese";
     setState(() {
     });
   }
@@ -36,6 +44,11 @@ class _MyHomePageState extends State<MyHomePage> {
                 'BMI: $bmi',
                 textScaleFactor: 2,
                 style: TextStyle(fontWeight: FontWeight.bold, color: Colors.red,)
+              ),
+              Text(
+                'Status: $status',
+                textScaleFactor: 1.5,
+                style: TextStyle(fontWeight: FontWeight.bold, color: Colors.grey[600],)
               ),
              
             //  SizedBox(
